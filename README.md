@@ -56,6 +56,7 @@ Section "InputClass"
   MatchIsKeyboard "on"
   Option          "XkbLayout" "se"
  EndSection
+ ```
 
 ### Configurations for KDE Plasma
 
