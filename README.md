@@ -34,7 +34,7 @@ pkg install git vim neofetch tmux
 ## Xorg and KDE Plasma
 
 ```
-pkg install xorg plasma5-plasma firefox alacritty
+pkg install xorg plasma5-plasma firefox konsole networkmgr
 ```
 
 ### Install graphics driver
@@ -63,7 +63,6 @@ Section "InputClass"
 Add these lines to /etc/rc.conf
 ```
 dbus_enable="YES"
-hald_enable="YES"
 ```
 
 Add this line to ~/.xinitrc for starting Plasma with startx
@@ -74,5 +73,5 @@ exec ck-launch-session startplasma-x11
 ## Nice to have packages
 
 ```
-pkg install brasero libreoffice
+pkg install brasero libreoffice kdenetwork
 ```
