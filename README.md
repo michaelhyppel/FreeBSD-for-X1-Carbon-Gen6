@@ -34,7 +34,7 @@ pkg install git vim neofetch tmux
 ## Xorg and KDE Plasma
 
 ```
-pkg install xorg plamsa5-plasma firefox alacritty
+pkg install xorg plasma5-plasma firefox alacritty
 ```
 
 ### Install graphics driver
