@@ -20,6 +20,11 @@ acpi_video_load="YES"
 acpi_ibm_load="YES"
 ```
 
+Add this line to /etc/sysctl.conf
+```
+hw.acpi.lid_switch_state=S3
+```
+
 ## Packages
 
 ```
@@ -38,6 +43,31 @@ pkg install xorg plamsa5-plasma firefox alacritty
 pkg install drm-kmod
 sysrc -f /etc/rc.conf kld_list+=i915kms
 pw usermod ${USERNAME} -G video
+```
+
+### Configure X
+
+Create a file for keyboard layout
+```
+vim /usr/local/etc/X11/xorg.conf.d/keyboard-se.conf
+
+Section "InputClass"
+  Identifier      "KeyboardDefaults"
+  MatchIsKeyboard "on"
+  Option          "XkbLayout" "se"
+ EndSection
+
+### Configurations for KDE Plasma
+
+Add these lines to /etc/rc.conf
+```
+dbus_enable="YES"
+hald_enable="YES"
+```
+
+Add this line to ~/.xinitrc for starting Plasma with startx
+```
+exec ck-launch-session startplasma-x11
 ```
 
 ## Nice to have packages
