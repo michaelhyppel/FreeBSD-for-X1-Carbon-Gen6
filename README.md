@@ -34,15 +34,18 @@ pkg install git vim neofetch tmux
 ## Xorg and KDE Plasma
 
 ```
-pkg install xorg plasma5-plasma firefox konsole networkmgr
+pkg install xorg plasma5-plasma firefox konsole networkmgr spectacle
 ```
 
 ### Install graphics driver
-
+Install package
 ```
 pkg install drm-kmod
-sysrc -f /etc/rc.conf kld_list+=i915kms
-pw usermod ${USERNAME} -G video
+```
+
+And load the module by adding this line to /etc/rc.conf
+```
+kld_list="/boot/modules/i915kms.ko"
 ```
 
 ### Configure X
@@ -73,5 +76,5 @@ exec ck-launch-session startplasma-x11
 ## Nice to have packages
 
 ```
-pkg install brasero libreoffice kdenetwork
+pkg install brasero libreoffice
 ```
