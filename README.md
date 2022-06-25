@@ -15,7 +15,7 @@ Install moused during install.
 Add this to /boot/loader.conf
 ```
 hw.psm.synaptics_support="1"
-``
+```
 
 Create the file /usr/local/etc/X11/xorg.conf.d/mouse.conf
 ```
