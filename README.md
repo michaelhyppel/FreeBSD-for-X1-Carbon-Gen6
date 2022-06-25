@@ -12,6 +12,23 @@ Firmware updates prior to installing:
 
 Install moused during install.
 
+Add this to /boot/loader.conf
+```
+hw.psm.synaptics_support="1"
+``
+
+Create the file /usr/local/etc/X11/xorg.conf.d/mouse.conf
+```
+Section "InputDevice"
+    Identifier      "Mouse0"
+    Driver          "mouse"
+    Option          "Protocol"      "auto"
+    Option          "Device"        "/dev/sysmouse"
+    Option          "ZAxisMapping"  "4 5 6 7"
+EndSection
+
+
+
 ## ACPI support for suspending, lcd etc
 
 Add these lines to /boot/loader.conf
