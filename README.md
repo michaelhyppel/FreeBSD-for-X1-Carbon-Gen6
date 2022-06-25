@@ -26,7 +26,7 @@ Section "InputDevice"
     Option          "Device"        "/dev/sysmouse"
     Option          "ZAxisMapping"  "4 5 6 7"
 EndSection
-
+```
 
 
 ## ACPI support for suspending, lcd etc
